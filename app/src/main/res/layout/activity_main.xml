@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eidotab.cocinamanager.MainActivity"
+    android:background="@drawable/fondogris"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/fondoblanco">
+
+        <TextView
+            android:id="@+id/habtimertxt"
+            android:text="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/swapper"
+            android:text="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/lyfondo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="0dp"
+                android:layout_weight="669"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="490dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/comandainfe"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="131"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:weightSum="100"
+                    tools:ignore="UselessParent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/line"
+                        android:layout_gravity="top"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="96"
+                        android:orientation="horizontal"
+                        android:weightSum="1280"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <!--DATA COCINA-->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="535"
+                            android:weightSum="535"
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="left"
+                                android:layout_marginLeft="46dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="238"
+                                tools:ignore="RtlHardcoded">
+                                <TextView
+                                    android:id="@+id/lbl_entracola"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:text="Entradas en Cola: "
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/lbl_fondocola"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:text="Fondos en Cola:"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/lbl_postrecola"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:text="Postres en Cola:   "
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/lbl_comandas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:text="Comandas en Cola: "
+                                    tools:ignore="HardcodedText" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+
+                                android:layout_weight="260"
+                                android:weightSum="100">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="left"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="vertical"
+                                    android:layout_weight="40"
+                                    tools:ignore="RtlHardcoded">
+
+                                    <TextView
+                                        android:id="@+id/txt_entracola"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                    <TextView
+                                        android:id="@+id/txt_fondocola"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <TextView
+                                        android:id="@+id/txt_postrecola"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <TextView
+                                        android:id="@+id/txt_comandas"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_weight="60">
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center">
+
+
+                                        <ImageButton
+                                            android:id="@+id/gps"
+                                            android:layout_gravity="center"
+                                            android:layout_width="46dp"
+                                            android:layout_height="46dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/gpsbut"
+                                            android:background="?attr/selectableItemBackgroundBorderless"
+                                            tools:ignore="ContentDescription" />
+
+                                        <ImageView
+                                            android:layout_gravity="center"
+                                            android:id="@+id/ledtx"
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            android:src="@drawable/led2"
+                                            android:scaleType="centerInside"
+                                            android:background="?attr/selectableItemBackgroundBorderless"
+                                            tools:ignore="ContentDescription" />
+
+                                    </FrameLayout>
+
+
+
+
+
+
+                                </LinearLayout>
+
+
+
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--RELOJ-->
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="157">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/rej"
+                                tools:ignore="ContentDescription" />
+
+                            <TextClock
+                                android:id="@+id/tcl"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/ctexto"
+                                android:layout_height="wrap_content"
+                                android:textSize="40sp"/>
+
+                        </FrameLayout>
+
+                        <!--BOTONERA-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="bottom"
+                            android:weightSum="532"
+                            android:layout_weight="532">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="124">
+                                <TextView
+                                    android:id="@+id/lblidset"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="120"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/logo"
+                                    tools:ignore="ContentDescription" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_weight="288"
+                                android:weightSum="100">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_weight="60"
+                                    android:weightSum="100"
+                                    tools:ignore="NestedWeights">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="50"
+                                        android:orientation="vertical"
+                                        android:gravity="center">
+
+                                        <Switch
+                                            android:id="@+id/modoco"
+                                            android:checked="false"
+                                            android:visibility="visible"
+                                            android:textOff="MNC"
+                                            android:textOn="MTC"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="HardcodedText" />
+
+                                        <TextView
+                                            android:id="@+id/lbl_modoco"
+                                            android:text="MMNC"
+                                            android:textStyle="bold"
+                                            android:layout_gravity="center"
+                                            android:textColor="@color/colorAccent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            tools:ignore="HardcodedText" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="50"
+                                        android:orientation="horizontal"
+                                        android:gravity="center">
+
+                                        <Button
+                                            android:visibility="invisible"
+                                            android:id="@+id/bntablet"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:text="OK"
+                                            android:layout_marginRight="10dp"
+                                            android:textSize="12sp"
+                                            tools:ignore="ButtonOrder,HardcodedText,RtlHardcoded" />
+
+
+                                        <EditText
+                                            android:visibility="invisible"
+                                            android:id="@+id/entablet"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number"
+                                            android:hint="00"
+                                            tools:ignore="HardcodedText" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="40"
+                                    tools:ignore="RtlHardcoded">
+
+                                    <ImageButton
+                                        android:id="@+id/btn_salir"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:scaleType="fitCenter"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginBottom="20dp"
+                                        android:src="@drawable/apagar"
+                                        android:background="?attr/selectableItemBackgroundBorderless"
+                                        tools:ignore="ContentDescription" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

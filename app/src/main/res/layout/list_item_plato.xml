@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_plato"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Button"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/ctexto"
+        android:background="@drawable/entradasbtn"
+        android:textSize="12sp"/>
+
+            <LinearLayout
+                android:id="@+id/lyo_contor"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/customborder"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <LinearLayout
+                        android:id="@+id/lyo_ingre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout>  <!--INGREDIENTES-->
+
+                </ScrollView>
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <LinearLayout
+                        android:id="@+id/lyo_adic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout> <!--ADICIONALES-->
+
+                </ScrollView>
+
+            </LinearLayout> <!--CONTORNOS-->
+
+</LinearLayout>
